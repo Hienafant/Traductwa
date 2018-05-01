@@ -9,4 +9,6 @@ Per ara hi ha codi per a traduir de la Viquipèdia en espanyol al català.
 Necessita el llenguatge de programació Python, versió 3.x, amb la biblioteca de codi [re](https://docs.python.org/3/library/re.html).
 
 ## Funcionament
-Copies el codi wiki a l'arxiu entrada.txt, executes amb Python (al menys en les versions 3.x funciona) i el resultat el trobaràs a eixida.txt
+ 1.Copies el codi wiki a l'arxiu entrada.txt i deses.
+ 2. L'executes amb Python (al menys en les versions 3.x funciona) l'script adequat (traductwa_ESaCA.py tradueix de la Viquipèdia en espanyol a la Viquipèdia en català)
+ 3. El resultat el trobaràs a eixida.txt
