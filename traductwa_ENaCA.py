@@ -68,6 +68,9 @@ for volumen in volumen_s:
 numero_s = re.findall('''\|\s*issue''', txt)
 for numero in numero_s:
     txt = txt.replace(numero, "|exemplar")
+editorial_s = re.findall('''\|\s*publisher''', txt)
+for editorial in editorial_s:
+    txt = txt.replace(numero, "|editorial")
     
 with open('eixida.txt', 'w') as f:
     f.write(str(txt))
