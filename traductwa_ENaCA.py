@@ -56,6 +56,9 @@ for edicion in edicion_s:
 paginas_s = re.findall('''\|\s*pages''', txt)
 for paginas in paginas_s:
     txt = txt.replace(paginas, "|pàgines")
+pagina_s = re.findall('''\|\s*page\s*=''', txt)
+for pagina in pagina_s:
+    txt = txt.replace(pagina, "|pàgina=")
 agencia_s = re.findall('''\|\s*agency''', txt)
 for agencia in agencia_s:
     txt = txt.replace(agencia, "|agència")
