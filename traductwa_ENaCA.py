@@ -70,7 +70,7 @@ for numero in numero_s:
     txt = txt.replace(numero, "|exemplar")
 editorial_s = re.findall('''\|\s*publisher''', txt)
 for editorial in editorial_s:
-    txt = txt.replace(numero, "|editorial")
+    txt = txt.replace(editorial, "|editorial")
     
 with open('eixida.txt', 'w') as f:
     f.write(str(txt))
