@@ -1,0 +1,53 @@
+ 	
+
+{{cita libro
+ | apellido=Lincoln
+ | nombre=A.
+ | apellido2=Washington
+ | nombre2=G.
+ | apellido3=Adams
+ | nombre3=J.
+ | título=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}
+
+ 	
+
+{{cita libro
+ | apellido =Lincoln
+ | nombre=A.
+ | apellido2=Washington
+ | nombre2=G.
+ | apellido3=Adams
+ | nombre3=J.
+ | título=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}
+
+ 	
+
+{{cita libro
+ | apellido = Lincoln
+ | nombre=A.
+ | apellido2=Washington
+ | nombre2=G.
+ | apellido3=Adams
+ | nombre3=J.
+ | título=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}

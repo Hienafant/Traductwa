@@ -1,0 +1,53 @@
+
+
+{{ref-llibre
+ |cognom=Lincoln
+ |nom=A.
+ |cognom2=Washington
+ |nom2=G.
+ |cognom3=Adams
+ |nom3=J.
+ |títol=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}
+
+
+
+{{ref-llibre
+ |cognom =Lincoln
+ |nom=A.
+ |cognom2=Washington
+ |nom2=G.
+ |cognom3=Adams
+ |nom3=J.
+ |títol=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}
+
+
+
+{{ref-llibre
+ |cognom = Lincoln
+ |nom=A.
+ |cognom2=Washington
+ |nom2=G.
+ |cognom3=Adams
+ |nom3=J.
+ |títol=All the Presidents' Names
+ | editorial=The Pentagon
+ | ubicación=Home Base, Nueva York
+ | volumen=XII
+ | edición=2.ª
+ | año=2007
+ | idioma = inglés
+}}
