@@ -32,7 +32,7 @@ for revista in revista_s:
 apellido_s = re.findall('''\|\s*last''', txt)
 for apellido in apellido_s:
     txt = txt.replace(apellido, "|cognom")
-nombre_s = re.findall('''\|\sname''', txt)
+nombre_s = re.findall('''\|\s*name''', txt)
 for nombre in nombre_s:
     txt = txt.replace(nombre, "|nom")
 ubicacion_s = re.findall('''\|\s*location''', txt)
