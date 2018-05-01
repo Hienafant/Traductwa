@@ -11,7 +11,7 @@ Necessita el llenguatge de programació Python, versió 3.x, amb la biblioteca d
 ## Funcionament
 
   1. Copies el codi wiki a l'arxiu entrada.txt i deses. 
-  2. L'executes amb Python (al menys en les versions 3.x funciona) l'script adequat:
+  2. Executes amb Python (al menys en les versions 3.x funciona) l'script adequat:
  * traductwa_ESaCA.py tradueix de la Viquipèdia en espanyol a la Viquipèdia en català.
  * traductwa_ENaCA.py tradueix de la Viquipèdia en anglès a la Viquipèdia en català.
   3. El resultat el trobaràs a eixida.txt
