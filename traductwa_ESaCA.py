@@ -43,7 +43,7 @@ for fechaacceso in fechaacceso_s:
     txt = txt.replace(fechaacceso, "|consulta")
 fecha_s = re.findall('''\|\s*fecha''', txt)
 for fecha in fecha_s:
-    txt = txt.replace(, "|data")
+    txt = txt.replace(fecha, "|data")
 sitioweb_s = re.findall('''\|\s*sitioweb''', txt)
 for sitioweb in sitioweb_s:
     txt = txt.replace(sitioweb, "|obra")
