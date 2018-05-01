@@ -29,10 +29,10 @@ for publicacion in publicacion_s:
 revista_s = re.findall('''\|\s*revista''', txt)
 for revista in revista_s:
     txt = txt.replace(revista, "|publicació")
-apellido_s = re.findall('''\|\sapellido''', txt)
+apellido_s = re.findall('''\|\s*apellido''', txt)
 for apellido in apellido_s:
     txt = txt.replace(apellido, "|cognom")
-nombre_s = re.findall('''\|\snombre''', txt)
+nombre_s = re.findall('''\|\s*nombre''', txt)
 for nombre in nombre_s:
     txt = txt.replace(nombre, "|nom")
 ubicacion_s = re.findall('''\|\s*ubicación''', txt)
