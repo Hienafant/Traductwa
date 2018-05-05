@@ -41,6 +41,9 @@ for ubicacion in ubicacion_s:
 fechaacceso_s = re.findall('''\|\s*access-date''', txt)
 for fechaacceso in fechaacceso_s:
     txt = txt.replace(fechaacceso, "|consulta")
+fechaacceso_s = re.findall('''\|\s*accessdate''', txt)
+for fechaacceso in fechaacceso_s:
+    txt = txt.replace(fechaacceso, "|consulta")
 fecha_s = re.findall('''\|\s*date''', txt)
 for fecha in fecha_s:
     txt = txt.replace(fecha, "|data")
