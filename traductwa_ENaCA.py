@@ -38,6 +38,9 @@ for nombre in nombre_s:
 ubicacion_s = re.findall('''\|\s*location''', txt)
 for ubicacion in ubicacion_s:
     txt = txt.replace(ubicacion, "|lloc")
+ubicacion_s = re.findall('''\|\s*publication-place''', txt)
+for ubicacion in ubicacion_s:
+    txt = txt.replace(ubicacion, "|lloc")
 fechaacceso_s = re.findall('''\|\s*access-date''', txt)
 for fechaacceso in fechaacceso_s:
     txt = txt.replace(fechaacceso, "|consulta")
