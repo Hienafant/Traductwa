@@ -35,11 +35,14 @@ for apellido in apellido_s:
 nombre_s = re.findall('''\|\s*name''', txt)
 for nombre in nombre_s:
     txt = txt.replace(nombre, "|nom")
-ubicacion_s = re.findall('''\|\s*location''', txt)
-for ubicacion in ubicacion_s:
+ubicacion_a = re.findall('''\|\s*location''', txt)
+for ubicacion in ubicacion_a:
     txt = txt.replace(ubicacion, "|lloc")
-ubicacion_s = re.findall('''\|\s*publication-place''', txt)
-for ubicacion in ubicacion_s:
+ubicacion_b = re.findall('''\|\s*publication-place''', txt)
+for ubicacion in ubicacion_b:
+    txt = txt.replace(ubicacion, "|lloc")
+ubicacion_c = re.findall('''\|\s*place''', txt)
+for ubicacion in ubicacion_c:
     txt = txt.replace(ubicacion, "|lloc")
 fechaacceso_s = re.findall('''\|\s*access-date''', txt)
 for fechaacceso in fechaacceso_s:
