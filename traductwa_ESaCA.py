@@ -29,6 +29,9 @@ for publicacion in publicacion_s:
 revista_s = re.findall('''\|\s*revista''', txt)
 for revista in revista_s:
     txt = txt.replace(revista, "|publicació")
+apellido_a = re.findall('''\|\s*apellidos''', txt)
+for apellido in apellido_a:
+    txt = txt.replace(apellido, "|cognom")
 apellido_s = re.findall('''\|\s*apellido''', txt)
 for apellido in apellido_s:
     txt = txt.replace(apellido, "|cognom")
