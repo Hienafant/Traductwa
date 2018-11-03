@@ -71,6 +71,9 @@ for volumen in volumen_s:
 numero_s = re.findall('''\|\s*número''', txt)
 for numero in numero_s:
     txt = txt.replace(numero, "|exemplar")
+convert_s = re.findall('''\{\{convertir''', txt)
+for convert in convert_s:
+    txt = txt.replace(convert, "{{convert")
     
 with open('eixida.txt', 'w') as f:
     f.write(str(txt))
