@@ -8,6 +8,9 @@ with open('entrada.txt', 'r') as f:
 cita_libro_s = re.findall('''{{cite book''', txt, re.I)
 for cita_libro in cita_libro_s:
     txt = txt.replace(cita_libro, "{{ref-llibre")
+cita_report_s = re.findall('''{{cite report''', txt, re.I)
+for cita_report in cita_report_s:
+    txt = txt.replace(cita_report, "{{ref-llibre")
 cita_web_s = re.findall('''{{cite web''', txt, re.I)
 for cita_web in cita_web_s:
     txt = txt.replace(cita_web, "{{ref-web")
