@@ -83,10 +83,10 @@ for numero in numero_s:
 editorial_s = re.findall('''\|\s*publisher''', txt)
 for editorial in editorial_s:
     txt = txt.replace(editorial, "|editorial")
-urlarchivo_s = re.findall('''\|\s*archive-url''')
+urlarchivo_s = re.findall('''\|\s*archive-url''', txt)
 for urlarchivo in urlarchivo_s:
     txt = txt.replace(urlarchivo,"|arxiuurl")
-fechaarchivo_s = re.findall('''\|\s*archive-date''')
+fechaarchivo_s = re.findall('''\|\s*archive-date''', txt)
 for fechaarchivo in fechaarchivo_s:
     txt = txt.replace(fechaarchivo,"|arxiudata")
 txt = txt.replace("[[File:", "[[Fitxer:")
