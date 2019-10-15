@@ -20,6 +20,9 @@ for cita_noticia in cita_noticia_s:
 cita_publicacion_s = re.findall('''{{cite journal''', txt, re.I)
 for cita_publicacion in cita_publicacion_s:
     txt = txt.replace(cita_publicacion, "{{ref-publicació")
+cita_tesi_s = re.findall('''{{cite thesis''', txt, re.I)
+for cita_tesi in cita_tesi_s:
+    txt = txt.replace(cita_tesi, "{{ref-tesi")
 titulo_s = re.findall('''\|\s*title''', txt)
 for titulo in titulo_s:
     txt = txt.replace(titulo, "|títol")
@@ -32,21 +35,131 @@ for publicacion in publicacion_s:
 revista_s = re.findall('''\|\s*work''', txt) #de Cite news
 for revista in revista_s:
     txt = txt.replace(revista, "|obra")
-apellido_s = re.findall('''\|\s*last''', txt)
+newspaper_s = re.findall('''\|\s*newspaper''', txt) #de Cite news
+for newspaper in newspaper_s:
+    txt = txt.replace(newspaper, "|obra")
+apellido_s = re.findall('''\|\s*last[1]*''', txt)
 for apellido in apellido_s:
     txt = txt.replace(apellido, "|cognom")
-nombre_s = re.findall('''\|\s*name''', txt)
+autor_s = re.findall('''\|\s*author''', txt)
+for autor in autor_s:
+    txt = txt.replace(autor, "|autor")
+nombre_s = re.findall('''\|\s*first[1]*''', txt)
 for nombre in nombre_s:
     txt = txt.replace(nombre, "|nom")
-ubicacion_a = re.findall('''\|\s*location''', txt)
-for ubicacion in ubicacion_a:
+ubicacion_s = re.findall('''\|\s*location''', txt)
+for ubicacion in ubicacion_s:
     txt = txt.replace(ubicacion, "|lloc")
-ubicacion_b = re.findall('''\|\s*publication-place''', txt)
-for ubicacion in ubicacion_b:
+ubicacion_s = re.findall('''\|\s*publication-place''', txt)
+for ubicacion in ubicacion_s:
     txt = txt.replace(ubicacion, "|lloc")
-ubicacion_c = re.findall('''\|\s*place''', txt)
-for ubicacion in ubicacion_c:
+ubicacion_s = re.findall('''\|\s*place''', txt)
+for ubicacion in ubicacion_s:
     txt = txt.replace(ubicacion, "|lloc")
+mes_fecha_s = re.findall('''\|\s*date\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
+for mes_fecha in mes_fecha_s:
+    if mes_fecha == "January":
+        txt = txt.replace(mes_fecha, "gener")
+    if mes_fecha == "February":
+        txt = txt.replace(mes_fecha, "febrer")
+    if mes_fecha == "March":
+        txt = txt.replace(mes_fecha, "març")
+    if mes_fecha == "April":
+        txt = txt.replace(mes_fecha, "abril")
+    if mes_fecha == "May":
+        txt = txt.replace(mes_fecha, "maig")
+    if mes_fecha == "June":
+        txt = txt.replace(mes_fecha, "juny")
+    if mes_fecha == "July":
+        txt = txt.replace(mes_fecha, "juliol")
+    if mes_fecha == "August":
+        txt = txt.replace(mes_fecha, "agost")
+    if mes_fecha == "September":
+        txt = txt.replace(mes_fecha, "setembre")
+    if mes_fecha == "October":
+        txt = txt.replace(mes_fecha, "octubre")
+    if mes_fecha == "November":
+        txt = txt.replace(mes_fecha, "novembre")
+    if mes_fecha == "December":
+        txt = txt.replace(mes_fecha, "desembre")
+mes_fecha_s = re.findall('''\|\s*access-date\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
+for mes_fecha in mes_fecha_s:
+    if mes_fecha == "January":
+        txt = txt.replace(mes_fecha, "gener")
+    if mes_fecha == "February":
+        txt = txt.replace(mes_fecha, "febrer")
+    if mes_fecha == "March":
+        txt = txt.replace(mes_fecha, "març")
+    if mes_fecha == "April":
+        txt = txt.replace(mes_fecha, "abril")
+    if mes_fecha == "May":
+        txt = txt.replace(mes_fecha, "maig")
+    if mes_fecha == "June":
+        txt = txt.replace(mes_fecha, "juny")
+    if mes_fecha == "July":
+        txt = txt.replace(mes_fecha, "juliol")
+    if mes_fecha == "August":
+        txt = txt.replace(mes_fecha, "agost")
+    if mes_fecha == "September":
+        txt = txt.replace(mes_fecha, "setembre")
+    if mes_fecha == "October":
+        txt = txt.replace(mes_fecha, "octubre")
+    if mes_fecha == "November":
+        txt = txt.replace(mes_fecha, "novembre")
+    if mes_fecha == "December":
+        txt = txt.replace(mes_fecha, "desembre")
+mes_fecha_s = re.findall('''\|\s*accessdate\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
+for mes_fecha in mes_fecha_s:
+    if mes_fecha == "January":
+        txt = txt.replace(mes_fecha, "gener")
+    if mes_fecha == "February":
+        txt = txt.replace(mes_fecha, "febrer")
+    if mes_fecha == "March":
+        txt = txt.replace(mes_fecha, "març")
+    if mes_fecha == "April":
+        txt = txt.replace(mes_fecha, "abril")
+    if mes_fecha == "May":
+        txt = txt.replace(mes_fecha, "maig")
+    if mes_fecha == "June":
+        txt = txt.replace(mes_fecha, "juny")
+    if mes_fecha == "July":
+        txt = txt.replace(mes_fecha, "juliol")
+    if mes_fecha == "August":
+        txt = txt.replace(mes_fecha, "agost")
+    if mes_fecha == "September":
+        txt = txt.replace(mes_fecha, "setembre")
+    if mes_fecha == "October":
+        txt = txt.replace(mes_fecha, "octubre")
+    if mes_fecha == "November":
+        txt = txt.replace(mes_fecha, "novembre")
+    if mes_fecha == "December":
+        txt = txt.replace(mes_fecha, "desembre")
+mes_fecha_s = re.findall('''\|\s*archive[-]?date\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
+for mes_fecha in mes_fecha_s:
+    if mes_fecha == "January":
+        txt = txt.replace(mes_fecha, "gener")
+    if mes_fecha == "February":
+        txt = txt.replace(mes_fecha, "febrer")
+    if mes_fecha == "March":
+        txt = txt.replace(mes_fecha, "març")
+    if mes_fecha == "April":
+        txt = txt.replace(mes_fecha, "abril")
+    if mes_fecha == "May":
+        txt = txt.replace(mes_fecha, "maig")
+    if mes_fecha == "June":
+        txt = txt.replace(mes_fecha, "juny")
+    if mes_fecha == "July":
+        txt = txt.replace(mes_fecha, "juliol")
+    if mes_fecha == "August":
+        txt = txt.replace(mes_fecha, "agost")
+    if mes_fecha == "September":
+        txt = txt.replace(mes_fecha, "setembre")
+    if mes_fecha == "October":
+        txt = txt.replace(mes_fecha, "octubre")
+    if mes_fecha == "November":
+        txt = txt.replace(mes_fecha, "novembre")
+    if mes_fecha == "December":
+        txt = txt.replace(mes_fecha, "desembre")
 fechaacceso_s = re.findall('''\|\s*access-date''', txt)
 for fechaacceso in fechaacceso_s:
     txt = txt.replace(fechaacceso, "|consulta")
@@ -83,14 +196,15 @@ for numero in numero_s:
 editorial_s = re.findall('''\|\s*publisher''', txt)
 for editorial in editorial_s:
     txt = txt.replace(editorial, "|editorial")
-urlarchivo_s = re.findall('''\|\s*archive-url''', txt)
+urlarchivo_s = re.findall('''\|\s*archive[-]?url''', txt)
 for urlarchivo in urlarchivo_s:
     txt = txt.replace(urlarchivo,"|arxiuurl")
-fechaarchivo_s = re.findall('''\|\s*archive-date''', txt)
+fechaarchivo_s = re.findall('''\|\s*archive[-]?date''', txt)
 for fechaarchivo in fechaarchivo_s:
     txt = txt.replace(fechaarchivo,"|arxiudata")
 txt = txt.replace("[[File:", "[[Fitxer:")
 txt = txt.replace("{{Authority control", "{{Autoritat")
-    
+txt = txt.replace("{{DEFAULTSORT", "{{ORDENA")
+
 with open('eixida.txt', 'w') as f:
     f.write(str(txt))
