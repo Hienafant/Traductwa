@@ -82,33 +82,7 @@ for mes_fecha in mes_fecha_s:
         txt = txt.replace(mes_fecha, "novembre")
     if mes_fecha == "December":
         txt = txt.replace(mes_fecha, "desembre")
-mes_fecha_s = re.findall('''\|\s*access-date\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
-for mes_fecha in mes_fecha_s:
-    if mes_fecha == "January":
-        txt = txt.replace(mes_fecha, "gener")
-    if mes_fecha == "February":
-        txt = txt.replace(mes_fecha, "febrer")
-    if mes_fecha == "March":
-        txt = txt.replace(mes_fecha, "març")
-    if mes_fecha == "April":
-        txt = txt.replace(mes_fecha, "abril")
-    if mes_fecha == "May":
-        txt = txt.replace(mes_fecha, "maig")
-    if mes_fecha == "June":
-        txt = txt.replace(mes_fecha, "juny")
-    if mes_fecha == "July":
-        txt = txt.replace(mes_fecha, "juliol")
-    if mes_fecha == "August":
-        txt = txt.replace(mes_fecha, "agost")
-    if mes_fecha == "September":
-        txt = txt.replace(mes_fecha, "setembre")
-    if mes_fecha == "October":
-        txt = txt.replace(mes_fecha, "octubre")
-    if mes_fecha == "November":
-        txt = txt.replace(mes_fecha, "novembre")
-    if mes_fecha == "December":
-        txt = txt.replace(mes_fecha, "desembre")
-mes_fecha_s = re.findall('''\|\s*accessdate\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
+mes_fecha_s = re.findall('''\|\s*access[-]?date\s*=\s*\d*\s*([a-zA-Z]+)''', txt)
 for mes_fecha in mes_fecha_s:
     if mes_fecha == "January":
         txt = txt.replace(mes_fecha, "gener")
@@ -202,7 +176,19 @@ for urlarchivo in urlarchivo_s:
 fechaarchivo_s = re.findall('''\|\s*archive[-]?date''', txt)
 for fechaarchivo in fechaarchivo_s:
     txt = txt.replace(fechaarchivo,"|arxiudata")
+llengua_s = re.findall('''\|\s*language\s* ''', txt)
+for llengua in llengua_s:
+    txt = txt.replace(llengua, "|llengua")
+llengues = re.findall('''\|llengua\s*=\s*([a-zA-Z]+)''', txt)
+for llengua in llengues:
+    if llengua == "en":
+        txt = txt.replace(llengua, "anglès")
+    if llengua == "Norwegian":
+        txt = txt.replace(llengua, "noruec")
+    if llengua == "es":
+        txt = txt.replace(llengua, "espanyol")
 txt = txt.replace("[[File:", "[[Fitxer:")
+txt = txt.replace("[[Category:", "[[Categoria:")
 txt = txt.replace("{{Authority control", "{{Autoritat")
 txt = txt.replace("{{DEFAULTSORT", "{{ORDENA")
 
